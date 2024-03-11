@@ -1,12 +1,9 @@
 <template>
   <div class="orderbook__container">
-    <EssentialLink/>
 
-    <SailingComponent class="orderbook__sailing"/>
-
-    <AllOrdersComponent class="orderbook__allOrders"/>
-
-    <MyOrdersComponent class="orderbook__myOrders"/>
+    <SailingComponent class="orderbook__sailing q-ma-xs"/>
+    <AllOrdersComponent class="orderbook__allOrders q-ma-xs"/>
+    <MyOrdersComponent class="orderbook__myOrders q-ma-xs"/>
 
   </div>
 </template>
@@ -25,26 +22,24 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style scoped>
 .orderbook__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto min-content 20em 1fr;
-
   grid-template-areas:
-    'mo mts'
-    'mlc mts'
+    'os oao'
+    'omo oao'
 }
 
 .orderbook__sailing {
-  grid-area: 'mo'
+  grid-area: os
 }
-
-.orderbook__allOrders {
-  grid-area: 'mts';
-}
-
 .orderbook__myOrders {
-  grid-area: 'mlc';
+  grid-area: omo;
 }
+.orderbook__allOrders {
+  grid-area: oao;
+}
+
 </style>
