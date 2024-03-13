@@ -58,7 +58,7 @@ module.exports = configure((/* ctx */) => ({
 
     // publicPath: '/',
     // analyze: true,
-    // env: {},
+    env: require('dotenv').config().parsed,
     // rawDefine: {}
     // ignorePublicFolder: true,
     // minify: false,
@@ -67,7 +67,9 @@ module.exports = configure((/* ctx */) => ({
 
     // extendViteConf (viteConf) {},
     // viteVuePluginOptions: {},
-
+    // plugins: [
+    //   'Notify',
+    // ],
     vitePlugins: [
       ['vite-plugin-checker', {
         eslint: {
@@ -98,7 +100,9 @@ module.exports = configure((/* ctx */) => ({
     // directives: [],
 
     // Quasar plugins
-    plugins: [],
+    plugins: [
+      'Notify',
+    ],
   },
 
   // animations: 'all', // --- includes all animations
