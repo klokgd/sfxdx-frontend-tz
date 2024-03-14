@@ -16,7 +16,6 @@
 
 <script>
 import { defineComponent } from 'vue';
-// import EssentialLink from 'components/EssentialLink.vue';
 import { useMetamaskStore } from 'src/store/metamask.store';
 
 export default defineComponent({

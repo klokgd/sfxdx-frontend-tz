@@ -85,7 +85,6 @@ export default defineComponent({
       orderPrice: ref(0),
       web3ModalStore: useMetamaskStore(),
       orderStore: useOrderStore(),
-      // validateForm: ref(false),
       loadingPrice: ref(false),
       tokenOptions: [
         {
